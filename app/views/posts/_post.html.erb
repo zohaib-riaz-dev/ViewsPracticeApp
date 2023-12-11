@@ -1,0 +1,9 @@
+Title: <%= post.title %> </br>
+Content: <%= post.content %> </br>
+Comment:
+<ul>
+  <% post.comments.each do |comment| %>
+      <li><%= comment.body %></li>
+  <% end %>
+</ul>
+</br></br></br></br>

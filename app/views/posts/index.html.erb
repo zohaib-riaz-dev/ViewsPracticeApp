@@ -1,0 +1,7 @@
+<%= link_to "Create a post", new_post_path %>
+
+<% cache('posts_index') do %>
+  <h1>All Posts</h1>
+  <%= render partial: 'post', collection: @posts %>
+  <%= paginate @posts %>
+<% end %>
